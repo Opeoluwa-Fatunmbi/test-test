@@ -148,6 +148,7 @@ class ChargePoint:
         self.running = True
         self.transaction_id = None
 
+    # Main loop to run the Charge Point logic
     async def run(self):
         # Start a receiver task to process incoming CALLRESULT/CALLERRORs
         asyncio.create_task(self.receiver())
